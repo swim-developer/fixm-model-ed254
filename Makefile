@@ -31,11 +31,9 @@ test:
 	./mvnw test
 
 sonar:
-	@test -n "$(SONAR_TOKEN)" || { echo "Usage: make sonar SONAR_TOKEN=<token>"; \
-		echo "Start SonarQube with swim-developer-tools: make sonar-up"; exit 1; }
 	./mvnw clean verify sonar:sonar \
 		-Dsonar.host.url=$(SONAR_URL) \
-		-Dsonar.login=$(SONAR_TOKEN) \
+		$(if $(SONAR_TOKEN),-Dsonar.login=$(SONAR_TOKEN),) \
 		-Dsonar.projectKey=fixm-model-ed254 \
 		-Dsonar.projectName=fixm-model-ed254
 
