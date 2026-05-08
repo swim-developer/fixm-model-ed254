@@ -10,8 +10,8 @@
         <relativePath/>
     </parent>
 
-    <artifactId>fixm-ed254-model</artifactId>
-    <name>FIXM ED254 Model</name>
+    <artifactId>swim-fixm-model-ed254</artifactId>
+    <name>SWIM FIXM ED-254 Model</name>
     <description>JAXB bindings for FIXM 4.2 and ED-254 schemas used by ED-254 arrival sequence events.</description>
 
     <dependencies>
