@@ -12,7 +12,7 @@
      Project: https://github.com/orgs/swim-developer/repositories
      Purpose: Testing and validation of SWIM Extended AMAN (E-AMAN) services.
      All credits to the original specification authors must be preserved. -->
-<arrivalSequence xmlns="http://www.fixm.aero/ed254/1.0"
+<arrivalSequence xmlns="http://coopans.org/swim/ed254/arrivalSequence/1.0"
                  xmlns:fb="http://www.fixm.aero/base/4.3"
                  xmlns:fx="http://www.fixm.aero/flight/4.3">
     <creationTime>2026-04-08T12:10:00Z</creationTime>

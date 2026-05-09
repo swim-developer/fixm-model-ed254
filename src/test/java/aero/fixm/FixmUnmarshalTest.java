@@ -1,50 +1,26 @@
 package aero.fixm;
 
 import aero.fixm.ed254.ArrivalSequence;
-import jakarta.xml.bind.JAXBContext;
-import jakarta.xml.bind.JAXBException;
-import jakarta.xml.bind.UnmarshalException;
-import jakarta.xml.bind.Unmarshaller;
+import aero.fixm.validation.Ed254UnmarshallerPool;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.xml.sax.SAXParseException;
 
-import javax.xml.XMLConstants;
-import javax.xml.validation.Schema;
-import javax.xml.validation.SchemaFactory;
+import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
-import java.nio.file.Paths;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @DisplayName("FIXM ED-254 JAXB Unmarshal")
 class FixmUnmarshalTest {
 
-    private static JAXBContext jaxbContext;
-    private static Schema schema;
+    private static Ed254UnmarshallerPool pool;
 
     @BeforeAll
-    static void setup() throws Exception {
-        jaxbContext = JAXBContext.newInstance("aero.fixm.ed254:aero.fixm.base:aero.fixm.flight");
-
-        URL schemaUrl = FixmUnmarshalTest.class.getClassLoader().getResource("schemas/ed254.xsd");
-        SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-        schema = sf.newSchema(Paths.get(schemaUrl.toURI()).toFile());
-    }
-
-    private ArrivalSequence unmarshalArrivalSequence(String resourcePath) throws JAXBException {
-        Unmarshaller u = jaxbContext.createUnmarshaller();
-        u.setSchema(schema);
-        try (InputStream is = FixmUnmarshalTest.class.getResourceAsStream(resourcePath)) {
-            return (ArrivalSequence) u.unmarshal(is);
-        } catch (Exception e) {
-            if (e instanceof JAXBException je) throw je;
-            throw new JAXBException(e.getMessage(), e);
-        }
+    static void setup() {
+        pool = new Ed254UnmarshallerPool();
     }
 
     @ParameterizedTest(name = "{0}")
@@ -62,17 +38,20 @@ class FixmUnmarshalTest {
         "SEQ_LFPG_advisories_003.xml"
     })
     void validXml_shouldUnmarshalSuccessfully(String filename) throws Exception {
-        ArrivalSequence result = unmarshalArrivalSequence("/ed254-valid/" + filename);
+        String xml = loadXml("/ed254-valid/" + filename);
 
-        assertThat(result).isNotNull();
-        assertThat(result.getAerodromeDesignator())
+        Object result = pool.unmarshalAndValidate(xml);
+
+        assertThat(result).isInstanceOf(ArrivalSequence.class);
+        ArrivalSequence seq = (ArrivalSequence) result;
+        assertThat(seq.getAerodromeDesignator())
             .as("aerodromeDesignator must be present")
             .isNotNull()
             .isNotEmpty();
-        assertThat(result.getCreationTime())
+        assertThat(seq.getCreationTime())
             .as("creationTime must be present")
             .isNotNull();
-        assertThat(result.getSequenceEntries())
+        assertThat(seq.getSequenceEntries())
             .as("sequenceEntries must be present")
             .isNotNull();
     }
@@ -85,38 +64,17 @@ class FixmUnmarshalTest {
         "INVALID_SEQ_EIDW_024.xml"
     })
     void invalidXml_shouldFailWithValidationError(String filename) {
-        UnmarshalException ex = assertThrows(
-            UnmarshalException.class,
-            () -> unmarshalArrivalSequence("/ed254-invalid/" + filename)
-        );
-
-        Throwable cause = ex.getCause() != null ? ex.getCause() : ex.getLinkedException();
-        assertThat(cause)
-            .isNotNull()
-            .isInstanceOfAny(SAXParseException.class, Exception.class);
-
-        String errorDetail = buildErrorDetail(ex, filename);
-        System.out.println(errorDetail);
-
-        assertThat(cause.getMessage())
-            .as("validation error message must describe the problem")
-            .isNotNull()
-            .isNotEmpty();
+        assertThatThrownBy(() -> pool.unmarshalAndValidate(loadXml("/ed254-invalid/" + filename)))
+            .isInstanceOf(Ed254UnmarshallerPool.Ed254UnmarshalException.class)
+            .hasMessageContaining("validation failed");
     }
 
-    private String buildErrorDetail(UnmarshalException ex, String filename) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("\n  [VALIDATION FAILURE] ").append(filename);
-        Throwable linked = ex.getLinkedException() != null ? ex.getLinkedException() : ex.getCause();
-        if (linked instanceof SAXParseException spe) {
-            sb.append("\n    Line   : ").append(spe.getLineNumber());
-            sb.append("\n    Column : ").append(spe.getColumnNumber());
-            sb.append("\n    Error  : ").append(spe.getMessage());
-        } else if (linked != null) {
-            sb.append("\n    Error  : ").append(linked.getMessage());
-        } else {
-            sb.append("\n    Error  : ").append(ex.getMessage());
+    private String loadXml(String resourcePath) throws IOException {
+        try (InputStream is = getClass().getResourceAsStream(resourcePath)) {
+            if (is == null) {
+                throw new IOException("Resource not found: " + resourcePath);
+            }
+            return new String(is.readAllBytes());
         }
-        return sb.toString();
     }
 }

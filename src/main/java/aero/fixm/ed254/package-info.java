@@ -4,5 +4,5 @@
 // Any modifications to this file will be lost upon recompilation of the source schema. 
 //
 
-@jakarta.xml.bind.annotation.XmlSchema(namespace = "http://www.fixm.aero/ed254/1.0", elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
+@jakarta.xml.bind.annotation.XmlSchema(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", elementFormDefault = jakarta.xml.bind.annotation.XmlNsForm.QUALIFIED)
 package aero.fixm.ed254;

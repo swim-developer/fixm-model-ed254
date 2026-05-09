@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.fixm.aero/ed254/1.0"
-    targetNamespace="http://www.fixm.aero/ed254/1.0"
+<xs:schema xmlns="http://coopans.org/swim/ed254/arrivalSequence/1.0"
+    targetNamespace="http://coopans.org/swim/ed254/arrivalSequence/1.0"
     elementFormDefault="qualified"
     xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fb="http://www.fixm.aero/base/4.3"
     xmlns:fx="http://www.fixm.aero/flight/4.3">

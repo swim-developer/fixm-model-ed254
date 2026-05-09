@@ -53,7 +53,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *                       &lt;complexContent&gt;
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                           &lt;sequence&gt;
- *                             &lt;element name="flightAmanStrategy" type="{http://www.fixm.aero/ed254/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="flightAmanStrategy" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
  *                           &lt;/sequence&gt;
  *                         &lt;/restriction&gt;
  *                       &lt;/complexContent&gt;
@@ -75,7 +75,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *                           &lt;sequence&gt;
  *                             &lt;element name="amanTargetLandingTime" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType"/&gt;
- *                             &lt;element name="arrivalManagementHandlingIndicator" type="{http://www.fixm.aero/ed254/1.0}CodeAmanStatusType" minOccurs="0"/&gt;
+ *                             &lt;element name="arrivalManagementHandlingIndicator" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}CodeAmanStatusType" minOccurs="0"/&gt;
  *                             &lt;element name="lastFiledRecord" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *                             &lt;element name="sequenceNumber" type="{http://www.fixm.aero/base/4.3}CharacterStringType" minOccurs="0"/&gt;
  *                             &lt;element name="typeOfAircraft" type="{http://www.fixm.aero/base/4.3}AircraftTypeDesignatorType" minOccurs="0"/&gt;
@@ -89,9 +89,9 @@ import jakarta.xml.bind.annotation.XmlType;
  *                                     &lt;sequence&gt;
  *                                       &lt;element name="amanTargetTimeOver" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType"/&gt;
  *                                       &lt;element name="delayAtPoint" type="{http://www.fixm.aero/base/4.3}DurationType" minOccurs="0"/&gt;
- *                                       &lt;element name="planningStatus" type="{http://www.fixm.aero/ed254/1.0}CodePlanningStatus" minOccurs="0"/&gt;
+ *                                       &lt;element name="planningStatus" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}CodePlanningStatus" minOccurs="0"/&gt;
  *                                       &lt;element name="pointName" type="{http://www.fixm.aero/base/4.3}DesignatedPointDesignatorType"/&gt;
- *                                       &lt;element name="pointUsage" type="{http://www.fixm.aero/ed254/1.0}CodeArrivalPointUsage"/&gt;
+ *                                       &lt;element name="pointUsage" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}CodeArrivalPointUsage"/&gt;
  *                                       &lt;element name="advisoryInformation" minOccurs="0"&gt;
  *                                         &lt;complexType&gt;
  *                                           &lt;complexContent&gt;
@@ -122,9 +122,9 @@ import jakarta.xml.bind.annotation.XmlType;
  *                                       &lt;element name="eobt" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType" minOccurs="0"/&gt;
  *                                       &lt;element name="eobd" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType" minOccurs="0"/&gt;
  *                                       &lt;element name="gufi" type="{http://www.fixm.aero/base/4.3}GloballyUniqueFlightIdentifierType" minOccurs="0"/&gt;
- *                                       &lt;element name="ifplId" type="{http://www.fixm.aero/ed254/1.0}IfpsIdentifierType" minOccurs="0"/&gt;
+ *                                       &lt;element name="ifplId" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}IfpsIdentifierType" minOccurs="0"/&gt;
  *                                       &lt;element name="amanUniqueTechnicalId" type="{http://www.fixm.aero/base/4.3}CharacterStringType" minOccurs="0"/&gt;
- *                                       &lt;element name="modeSCallSign" type="{http://www.fixm.aero/ed254/1.0}ModeSCallSignType" minOccurs="0"/&gt;
+ *                                       &lt;element name="modeSCallSign" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}ModeSCallSignType" minOccurs="0"/&gt;
  *                                     &lt;/sequence&gt;
  *                                   &lt;/restriction&gt;
  *                                 &lt;/complexContent&gt;
@@ -154,7 +154,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *                                 &lt;/complexContent&gt;
  *                               &lt;/complexType&gt;
  *                             &lt;/element&gt;
- *                             &lt;element name="applicableStrategyPerFlight" type="{http://www.fixm.aero/ed254/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="applicableStrategyPerFlight" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
  *                             &lt;element name="totalDelay" minOccurs="0"&gt;
  *                               &lt;complexType&gt;
  *                                 &lt;complexContent&gt;
@@ -411,7 +411,7 @@ public class ArrivalSequence
      *             &lt;complexContent&gt;
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
      *                 &lt;sequence&gt;
-     *                   &lt;element name="flightAmanStrategy" type="{http://www.fixm.aero/ed254/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="flightAmanStrategy" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
      *                 &lt;/sequence&gt;
      *               &lt;/restriction&gt;
      *             &lt;/complexContent&gt;
@@ -555,7 +555,7 @@ public class ArrivalSequence
          *   &lt;complexContent&gt;
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
          *       &lt;sequence&gt;
-         *         &lt;element name="flightAmanStrategy" type="{http://www.fixm.aero/ed254/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="flightAmanStrategy" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
          *       &lt;/sequence&gt;
          *     &lt;/restriction&gt;
          *   &lt;/complexContent&gt;
@@ -628,7 +628,7 @@ public class ArrivalSequence
      *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
      *                 &lt;sequence&gt;
      *                   &lt;element name="amanTargetLandingTime" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType"/&gt;
-     *                   &lt;element name="arrivalManagementHandlingIndicator" type="{http://www.fixm.aero/ed254/1.0}CodeAmanStatusType" minOccurs="0"/&gt;
+     *                   &lt;element name="arrivalManagementHandlingIndicator" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}CodeAmanStatusType" minOccurs="0"/&gt;
      *                   &lt;element name="lastFiledRecord" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
      *                   &lt;element name="sequenceNumber" type="{http://www.fixm.aero/base/4.3}CharacterStringType" minOccurs="0"/&gt;
      *                   &lt;element name="typeOfAircraft" type="{http://www.fixm.aero/base/4.3}AircraftTypeDesignatorType" minOccurs="0"/&gt;
@@ -642,9 +642,9 @@ public class ArrivalSequence
      *                           &lt;sequence&gt;
      *                             &lt;element name="amanTargetTimeOver" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType"/&gt;
      *                             &lt;element name="delayAtPoint" type="{http://www.fixm.aero/base/4.3}DurationType" minOccurs="0"/&gt;
-     *                             &lt;element name="planningStatus" type="{http://www.fixm.aero/ed254/1.0}CodePlanningStatus" minOccurs="0"/&gt;
+     *                             &lt;element name="planningStatus" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}CodePlanningStatus" minOccurs="0"/&gt;
      *                             &lt;element name="pointName" type="{http://www.fixm.aero/base/4.3}DesignatedPointDesignatorType"/&gt;
-     *                             &lt;element name="pointUsage" type="{http://www.fixm.aero/ed254/1.0}CodeArrivalPointUsage"/&gt;
+     *                             &lt;element name="pointUsage" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}CodeArrivalPointUsage"/&gt;
      *                             &lt;element name="advisoryInformation" minOccurs="0"&gt;
      *                               &lt;complexType&gt;
      *                                 &lt;complexContent&gt;
@@ -675,9 +675,9 @@ public class ArrivalSequence
      *                             &lt;element name="eobt" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType" minOccurs="0"/&gt;
      *                             &lt;element name="eobd" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType" minOccurs="0"/&gt;
      *                             &lt;element name="gufi" type="{http://www.fixm.aero/base/4.3}GloballyUniqueFlightIdentifierType" minOccurs="0"/&gt;
-     *                             &lt;element name="ifplId" type="{http://www.fixm.aero/ed254/1.0}IfpsIdentifierType" minOccurs="0"/&gt;
+     *                             &lt;element name="ifplId" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}IfpsIdentifierType" minOccurs="0"/&gt;
      *                             &lt;element name="amanUniqueTechnicalId" type="{http://www.fixm.aero/base/4.3}CharacterStringType" minOccurs="0"/&gt;
-     *                             &lt;element name="modeSCallSign" type="{http://www.fixm.aero/ed254/1.0}ModeSCallSignType" minOccurs="0"/&gt;
+     *                             &lt;element name="modeSCallSign" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}ModeSCallSignType" minOccurs="0"/&gt;
      *                           &lt;/sequence&gt;
      *                         &lt;/restriction&gt;
      *                       &lt;/complexContent&gt;
@@ -707,7 +707,7 @@ public class ArrivalSequence
      *                       &lt;/complexContent&gt;
      *                     &lt;/complexType&gt;
      *                   &lt;/element&gt;
-     *                   &lt;element name="applicableStrategyPerFlight" type="{http://www.fixm.aero/ed254/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="applicableStrategyPerFlight" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
      *                   &lt;element name="totalDelay" minOccurs="0"&gt;
      *                     &lt;complexType&gt;
      *                       &lt;complexContent&gt;
@@ -823,7 +823,7 @@ public class ArrivalSequence
          *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
          *       &lt;sequence&gt;
          *         &lt;element name="amanTargetLandingTime" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType"/&gt;
-         *         &lt;element name="arrivalManagementHandlingIndicator" type="{http://www.fixm.aero/ed254/1.0}CodeAmanStatusType" minOccurs="0"/&gt;
+         *         &lt;element name="arrivalManagementHandlingIndicator" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}CodeAmanStatusType" minOccurs="0"/&gt;
          *         &lt;element name="lastFiledRecord" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
          *         &lt;element name="sequenceNumber" type="{http://www.fixm.aero/base/4.3}CharacterStringType" minOccurs="0"/&gt;
          *         &lt;element name="typeOfAircraft" type="{http://www.fixm.aero/base/4.3}AircraftTypeDesignatorType" minOccurs="0"/&gt;
@@ -837,9 +837,9 @@ public class ArrivalSequence
          *                 &lt;sequence&gt;
          *                   &lt;element name="amanTargetTimeOver" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType"/&gt;
          *                   &lt;element name="delayAtPoint" type="{http://www.fixm.aero/base/4.3}DurationType" minOccurs="0"/&gt;
-         *                   &lt;element name="planningStatus" type="{http://www.fixm.aero/ed254/1.0}CodePlanningStatus" minOccurs="0"/&gt;
+         *                   &lt;element name="planningStatus" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}CodePlanningStatus" minOccurs="0"/&gt;
          *                   &lt;element name="pointName" type="{http://www.fixm.aero/base/4.3}DesignatedPointDesignatorType"/&gt;
-         *                   &lt;element name="pointUsage" type="{http://www.fixm.aero/ed254/1.0}CodeArrivalPointUsage"/&gt;
+         *                   &lt;element name="pointUsage" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}CodeArrivalPointUsage"/&gt;
          *                   &lt;element name="advisoryInformation" minOccurs="0"&gt;
          *                     &lt;complexType&gt;
          *                       &lt;complexContent&gt;
@@ -870,9 +870,9 @@ public class ArrivalSequence
          *                   &lt;element name="eobt" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType" minOccurs="0"/&gt;
          *                   &lt;element name="eobd" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType" minOccurs="0"/&gt;
          *                   &lt;element name="gufi" type="{http://www.fixm.aero/base/4.3}GloballyUniqueFlightIdentifierType" minOccurs="0"/&gt;
-         *                   &lt;element name="ifplId" type="{http://www.fixm.aero/ed254/1.0}IfpsIdentifierType" minOccurs="0"/&gt;
+         *                   &lt;element name="ifplId" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}IfpsIdentifierType" minOccurs="0"/&gt;
          *                   &lt;element name="amanUniqueTechnicalId" type="{http://www.fixm.aero/base/4.3}CharacterStringType" minOccurs="0"/&gt;
-         *                   &lt;element name="modeSCallSign" type="{http://www.fixm.aero/ed254/1.0}ModeSCallSignType" minOccurs="0"/&gt;
+         *                   &lt;element name="modeSCallSign" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}ModeSCallSignType" minOccurs="0"/&gt;
          *                 &lt;/sequence&gt;
          *               &lt;/restriction&gt;
          *             &lt;/complexContent&gt;
@@ -902,7 +902,7 @@ public class ArrivalSequence
          *             &lt;/complexContent&gt;
          *           &lt;/complexType&gt;
          *         &lt;/element&gt;
-         *         &lt;element name="applicableStrategyPerFlight" type="{http://www.fixm.aero/ed254/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="applicableStrategyPerFlight" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}FlightAmanStrategy" maxOccurs="unbounded" minOccurs="0"/&gt;
          *         &lt;element name="totalDelay" minOccurs="0"&gt;
          *           &lt;complexType&gt;
          *             &lt;complexContent&gt;
@@ -986,18 +986,18 @@ public class ArrivalSequence
             @XmlElement(required = true)
             @XmlSchemaType(name = "dateTime")
             protected XMLGregorianCalendar amanTargetLandingTime;
-            @XmlElementRef(name = "arrivalManagementHandlingIndicator", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "arrivalManagementHandlingIndicator", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
             protected JAXBElement<String> arrivalManagementHandlingIndicator;
             @XmlElement(defaultValue = "false")
             protected boolean lastFiledRecord;
-            @XmlElementRef(name = "sequenceNumber", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "sequenceNumber", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
             protected JAXBElement<String> sequenceNumber;
             protected String typeOfAircraft;
             @XmlSchemaType(name = "string")
             protected WakeTurbulenceCategoryType wakeTurbulenceIcaoCategory;
             @XmlElement(defaultValue = "false")
             protected Boolean priorityHandled;
-            @XmlElementRef(name = "assignedArrivalRunway", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+            @XmlElementRef(name = "assignedArrivalRunway", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
             protected JAXBElement<RunwayDirectionDesignatorType> assignedArrivalRunway;
             protected ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation meteringInformation;
             @XmlElement(required = true)
@@ -1537,7 +1537,7 @@ public class ArrivalSequence
                 private static final long serialVersionUID = 1L;
                 @XmlElement(required = true, nillable = true)
                 protected String departureAerodrome;
-                @XmlElementRef(name = "timeToLoseOnTheGround", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+                @XmlElementRef(name = "timeToLoseOnTheGround", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
                 protected JAXBElement<BigInteger> timeToLoseOnTheGround;
 
                 /**
@@ -1607,9 +1607,9 @@ public class ArrivalSequence
              *         &lt;element name="eobt" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType" minOccurs="0"/&gt;
              *         &lt;element name="eobd" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType" minOccurs="0"/&gt;
              *         &lt;element name="gufi" type="{http://www.fixm.aero/base/4.3}GloballyUniqueFlightIdentifierType" minOccurs="0"/&gt;
-             *         &lt;element name="ifplId" type="{http://www.fixm.aero/ed254/1.0}IfpsIdentifierType" minOccurs="0"/&gt;
+             *         &lt;element name="ifplId" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}IfpsIdentifierType" minOccurs="0"/&gt;
              *         &lt;element name="amanUniqueTechnicalId" type="{http://www.fixm.aero/base/4.3}CharacterStringType" minOccurs="0"/&gt;
-             *         &lt;element name="modeSCallSign" type="{http://www.fixm.aero/ed254/1.0}ModeSCallSignType" minOccurs="0"/&gt;
+             *         &lt;element name="modeSCallSign" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}ModeSCallSignType" minOccurs="0"/&gt;
              *       &lt;/sequence&gt;
              *     &lt;/restriction&gt;
              *   &lt;/complexContent&gt;
@@ -1982,7 +1982,7 @@ public class ArrivalSequence
             {
 
                 private static final long serialVersionUID = 1L;
-                @XmlElementRef(name = "landingSequencePosition", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+                @XmlElementRef(name = "landingSequencePosition", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
                 protected JAXBElement<BigInteger> landingSequencePosition;
 
                 /**
@@ -2024,9 +2024,9 @@ public class ArrivalSequence
              *       &lt;sequence&gt;
              *         &lt;element name="amanTargetTimeOver" type="{http://www.fixm.aero/base/4.3}DateTimeUtcType"/&gt;
              *         &lt;element name="delayAtPoint" type="{http://www.fixm.aero/base/4.3}DurationType" minOccurs="0"/&gt;
-             *         &lt;element name="planningStatus" type="{http://www.fixm.aero/ed254/1.0}CodePlanningStatus" minOccurs="0"/&gt;
+             *         &lt;element name="planningStatus" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}CodePlanningStatus" minOccurs="0"/&gt;
              *         &lt;element name="pointName" type="{http://www.fixm.aero/base/4.3}DesignatedPointDesignatorType"/&gt;
-             *         &lt;element name="pointUsage" type="{http://www.fixm.aero/ed254/1.0}CodeArrivalPointUsage"/&gt;
+             *         &lt;element name="pointUsage" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}CodeArrivalPointUsage"/&gt;
              *         &lt;element name="advisoryInformation" minOccurs="0"&gt;
              *           &lt;complexType&gt;
              *             &lt;complexContent&gt;
@@ -2066,7 +2066,7 @@ public class ArrivalSequence
                 @XmlElement(required = true)
                 @XmlSchemaType(name = "dateTime")
                 protected XMLGregorianCalendar amanTargetTimeOver;
-                @XmlElementRef(name = "delayAtPoint", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+                @XmlElementRef(name = "delayAtPoint", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
                 protected JAXBElement<Duration> delayAtPoint;
                 protected String planningStatus;
                 @XmlElement(required = true)
@@ -2254,13 +2254,13 @@ public class ArrivalSequence
                 {
 
                     private static final long serialVersionUID = 1L;
-                    @XmlElementRef(name = "constraintCTA", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+                    @XmlElementRef(name = "constraintCTA", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
                     protected JAXBElement<XMLGregorianCalendar> constraintCTA;
-                    @XmlElementRef(name = "routeAdvisory", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+                    @XmlElementRef(name = "routeAdvisory", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
                     protected JAXBElement<String> routeAdvisory;
-                    @XmlElementRef(name = "speedAdvisory", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+                    @XmlElementRef(name = "speedAdvisory", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
                     protected JAXBElement<String> speedAdvisory;
-                    @XmlElementRef(name = "timeToGainOrLose", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+                    @XmlElementRef(name = "timeToGainOrLose", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
                     protected JAXBElement<BigInteger> timeToGainOrLose;
 
                     /**
@@ -2396,11 +2396,11 @@ public class ArrivalSequence
             {
 
                 private static final long serialVersionUID = 1L;
-                @XmlElementRef(name = "advisedHoldingProcedure", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+                @XmlElementRef(name = "advisedHoldingProcedure", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
                 protected JAXBElement<String> advisedHoldingProcedure;
-                @XmlElementRef(name = "advisedSTAR", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+                @XmlElementRef(name = "advisedSTAR", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
                 protected JAXBElement<String> advisedSTAR;
-                @XmlElementRef(name = "advisedTransition", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+                @XmlElementRef(name = "advisedTransition", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
                 protected JAXBElement<String> advisedTransition;
 
                 /**
@@ -2506,7 +2506,7 @@ public class ArrivalSequence
             {
 
                 private static final long serialVersionUID = 1L;
-                @XmlElementRef(name = "arrivalDelay", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+                @XmlElementRef(name = "arrivalDelay", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
                 protected JAXBElement<BigInteger> arrivalDelay;
 
                 /**

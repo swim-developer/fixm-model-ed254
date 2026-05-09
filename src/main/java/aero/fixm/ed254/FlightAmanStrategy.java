@@ -43,7 +43,7 @@ public class FlightAmanStrategy
 {
 
     private static final long serialVersionUID = 1L;
-    @XmlElementRef(name = "amanStrategyIdentifier", namespace = "http://www.fixm.aero/ed254/1.0", type = JAXBElement.class, required = false)
+    @XmlElementRef(name = "amanStrategyIdentifier", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
     protected JAXBElement<String> amanStrategyIdentifier;
 
     /**

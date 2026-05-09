@@ -34,21 +34,21 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
-    private static final QName _FlightAmanStrategyAmanStrategyIdentifier_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "amanStrategyIdentifier");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationArrivalManagementHandlingIndicator_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "arrivalManagementHandlingIndicator");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationSequenceNumber_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "sequenceNumber");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationAssignedArrivalRunway_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "assignedArrivalRunway");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationDepartureAirportTimeToLoseOnTheGround_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "timeToLoseOnTheGround");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationLandingPositionLandingSequencePosition_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "landingSequencePosition");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedHoldingProcedure_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "advisedHoldingProcedure");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedSTAR_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "advisedSTAR");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedTransition_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "advisedTransition");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationTotalDelayArrivalDelay_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "arrivalDelay");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationDelayAtPoint_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "delayAtPoint");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationConstraintCTA_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "constraintCTA");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationRouteAdvisory_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "routeAdvisory");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationSpeedAdvisory_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "speedAdvisory");
-    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationTimeToGainOrLose_QNAME = new QName("http://www.fixm.aero/ed254/1.0", "timeToGainOrLose");
+    private static final QName _FlightAmanStrategyAmanStrategyIdentifier_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "amanStrategyIdentifier");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationArrivalManagementHandlingIndicator_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "arrivalManagementHandlingIndicator");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationSequenceNumber_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "sequenceNumber");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationAssignedArrivalRunway_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "assignedArrivalRunway");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationDepartureAirportTimeToLoseOnTheGround_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "timeToLoseOnTheGround");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationLandingPositionLandingSequencePosition_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "landingSequencePosition");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedHoldingProcedure_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "advisedHoldingProcedure");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedSTAR_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "advisedSTAR");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedTransition_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "advisedTransition");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationTotalDelayArrivalDelay_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "arrivalDelay");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationDelayAtPoint_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "delayAtPoint");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationConstraintCTA_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "constraintCTA");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationRouteAdvisory_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "routeAdvisory");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationSpeedAdvisory_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "speedAdvisory");
+    private static final QName _ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationTimeToGainOrLose_QNAME = new QName("http://coopans.org/swim/ed254/arrivalSequence/1.0", "timeToGainOrLose");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: aero.fixm.ed254
@@ -225,7 +225,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "amanStrategyIdentifier", scope = FlightAmanStrategy.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "amanStrategyIdentifier", scope = FlightAmanStrategy.class)
     public JAXBElement<String> createFlightAmanStrategyAmanStrategyIdentifier(String value) {
         return new JAXBElement<>(_FlightAmanStrategyAmanStrategyIdentifier_QNAME, String.class, FlightAmanStrategy.class, value);
     }
@@ -238,7 +238,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "arrivalManagementHandlingIndicator", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "arrivalManagementHandlingIndicator", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.class)
     public JAXBElement<String> createArrivalSequenceSequenceEntriesArrivalManagementInformationArrivalManagementHandlingIndicator(String value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationArrivalManagementHandlingIndicator_QNAME, String.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.class, value);
     }
@@ -251,7 +251,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "sequenceNumber", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "sequenceNumber", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.class)
     public JAXBElement<String> createArrivalSequenceSequenceEntriesArrivalManagementInformationSequenceNumber(String value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationSequenceNumber_QNAME, String.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.class, value);
     }
@@ -264,7 +264,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link RunwayDirectionDesignatorType }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "assignedArrivalRunway", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "assignedArrivalRunway", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.class)
     public JAXBElement<RunwayDirectionDesignatorType> createArrivalSequenceSequenceEntriesArrivalManagementInformationAssignedArrivalRunway(RunwayDirectionDesignatorType value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationAssignedArrivalRunway_QNAME, RunwayDirectionDesignatorType.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.class, value);
     }
@@ -277,7 +277,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "timeToLoseOnTheGround", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.DepartureAirport.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "timeToLoseOnTheGround", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.DepartureAirport.class)
     public JAXBElement<BigInteger> createArrivalSequenceSequenceEntriesArrivalManagementInformationDepartureAirportTimeToLoseOnTheGround(BigInteger value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationDepartureAirportTimeToLoseOnTheGround_QNAME, BigInteger.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.DepartureAirport.class, value);
     }
@@ -290,7 +290,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "landingSequencePosition", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.LandingPosition.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "landingSequencePosition", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.LandingPosition.class)
     public JAXBElement<BigInteger> createArrivalSequenceSequenceEntriesArrivalManagementInformationLandingPositionLandingSequencePosition(BigInteger value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationLandingPositionLandingSequencePosition_QNAME, BigInteger.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.LandingPosition.class, value);
     }
@@ -303,7 +303,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "advisedHoldingProcedure", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.ProposedProcedure.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "advisedHoldingProcedure", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.ProposedProcedure.class)
     public JAXBElement<String> createArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedHoldingProcedure(String value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedHoldingProcedure_QNAME, String.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.ProposedProcedure.class, value);
     }
@@ -316,7 +316,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "advisedSTAR", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.ProposedProcedure.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "advisedSTAR", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.ProposedProcedure.class)
     public JAXBElement<String> createArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedSTAR(String value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedSTAR_QNAME, String.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.ProposedProcedure.class, value);
     }
@@ -329,7 +329,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "advisedTransition", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.ProposedProcedure.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "advisedTransition", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.ProposedProcedure.class)
     public JAXBElement<String> createArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedTransition(String value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationProposedProcedureAdvisedTransition_QNAME, String.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.ProposedProcedure.class, value);
     }
@@ -342,7 +342,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "arrivalDelay", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.TotalDelay.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "arrivalDelay", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.TotalDelay.class)
     public JAXBElement<BigInteger> createArrivalSequenceSequenceEntriesArrivalManagementInformationTotalDelayArrivalDelay(BigInteger value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationTotalDelayArrivalDelay_QNAME, BigInteger.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.TotalDelay.class, value);
     }
@@ -355,7 +355,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link Duration }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "delayAtPoint", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "delayAtPoint", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.class)
     public JAXBElement<Duration> createArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationDelayAtPoint(Duration value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationDelayAtPoint_QNAME, Duration.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.class, value);
     }
@@ -368,7 +368,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link XMLGregorianCalendar }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "constraintCTA", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "constraintCTA", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class)
     public JAXBElement<XMLGregorianCalendar> createArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationConstraintCTA(XMLGregorianCalendar value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationConstraintCTA_QNAME, XMLGregorianCalendar.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class, value);
     }
@@ -381,7 +381,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "routeAdvisory", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "routeAdvisory", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class)
     public JAXBElement<String> createArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationRouteAdvisory(String value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationRouteAdvisory_QNAME, String.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class, value);
     }
@@ -394,7 +394,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link String }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "speedAdvisory", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "speedAdvisory", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class)
     public JAXBElement<String> createArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationSpeedAdvisory(String value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationSpeedAdvisory_QNAME, String.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class, value);
     }
@@ -407,7 +407,7 @@ public class ObjectFactory {
      * @return
      *     the new instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
      */
-    @XmlElementDecl(namespace = "http://www.fixm.aero/ed254/1.0", name = "timeToGainOrLose", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class)
+    @XmlElementDecl(namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", name = "timeToGainOrLose", scope = ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class)
     public JAXBElement<BigInteger> createArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationTimeToGainOrLose(BigInteger value) {
         return new JAXBElement<>(_ArrivalSequenceSequenceEntriesArrivalManagementInformationMeteringInformationAdvisoryInformationTimeToGainOrLose_QNAME, BigInteger.class, ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation.AdvisoryInformation.class, value);
     }

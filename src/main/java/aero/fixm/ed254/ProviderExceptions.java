@@ -25,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="provException" type="{http://www.fixm.aero/ed254/1.0}AmanExceptionType"/&gt;
+ *         &lt;element name="provException" type="{http://coopans.org/swim/ed254/arrivalSequence/1.0}AmanExceptionType"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
