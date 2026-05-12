@@ -82,7 +82,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *                             &lt;element name="wakeTurbulenceIcaoCategory" type="{http://www.fixm.aero/flight/4.3}WakeTurbulenceCategoryType" minOccurs="0"/&gt;
  *                             &lt;element name="priorityHandled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
  *                             &lt;element name="assignedArrivalRunway" type="{http://www.fixm.aero/base/4.3}RunwayDirectionDesignatorType" minOccurs="0"/&gt;
- *                             &lt;element name="meteringInformation" minOccurs="0"&gt;
+ *                             &lt;element name="meteringInformation" maxOccurs="unbounded" minOccurs="0"&gt;
  *                               &lt;complexType&gt;
  *                                 &lt;complexContent&gt;
  *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -635,7 +635,7 @@ public class ArrivalSequence
      *                   &lt;element name="wakeTurbulenceIcaoCategory" type="{http://www.fixm.aero/flight/4.3}WakeTurbulenceCategoryType" minOccurs="0"/&gt;
      *                   &lt;element name="priorityHandled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
      *                   &lt;element name="assignedArrivalRunway" type="{http://www.fixm.aero/base/4.3}RunwayDirectionDesignatorType" minOccurs="0"/&gt;
-     *                   &lt;element name="meteringInformation" minOccurs="0"&gt;
+     *                   &lt;element name="meteringInformation" maxOccurs="unbounded" minOccurs="0"&gt;
      *                     &lt;complexType&gt;
      *                       &lt;complexContent&gt;
      *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -830,7 +830,7 @@ public class ArrivalSequence
          *         &lt;element name="wakeTurbulenceIcaoCategory" type="{http://www.fixm.aero/flight/4.3}WakeTurbulenceCategoryType" minOccurs="0"/&gt;
          *         &lt;element name="priorityHandled" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
          *         &lt;element name="assignedArrivalRunway" type="{http://www.fixm.aero/base/4.3}RunwayDirectionDesignatorType" minOccurs="0"/&gt;
-         *         &lt;element name="meteringInformation" minOccurs="0"&gt;
+         *         &lt;element name="meteringInformation" maxOccurs="unbounded" minOccurs="0"&gt;
          *           &lt;complexType&gt;
          *             &lt;complexContent&gt;
          *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
@@ -999,7 +999,7 @@ public class ArrivalSequence
             protected Boolean priorityHandled;
             @XmlElementRef(name = "assignedArrivalRunway", namespace = "http://coopans.org/swim/ed254/arrivalSequence/1.0", type = JAXBElement.class, required = false)
             protected JAXBElement<RunwayDirectionDesignatorType> assignedArrivalRunway;
-            protected ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation meteringInformation;
+            protected List<ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation> meteringInformation;
             @XmlElement(required = true)
             protected ArrivalSequence.SequenceEntries.ArrivalManagementInformation.FlightIdentification flightIdentification;
             protected ArrivalSequence.SequenceEntries.ArrivalManagementInformation.CustomWakeTurbulenceCategory customWakeTurbulenceCategory;
@@ -1197,25 +1197,33 @@ public class ArrivalSequence
             /**
              * Gets the value of the meteringInformation property.
              * 
-             * @return
-             *     possible object is
-             *     {@link ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation }
-             *     
-             */
-            public ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation getMeteringInformation() {
-                return meteringInformation;
-            }
-
-            /**
-             * Sets the value of the meteringInformation property.
+             * <p>This accessor method returns a reference to the live list,
+             * not a snapshot. Therefore any modification you make to the
+             * returned list will be present inside the Jakarta XML Binding object.
+             * This is why there is not a {@code set} method for the meteringInformation property.</p>
              * 
-             * @param value
-             *     allowed object is
-             *     {@link ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation }
-             *     
+             * <p>
+             * For example, to add a new item, do as follows:
+             * </p>
+             * <pre>
+             * getMeteringInformation().add(newItem);
+             * </pre>
+             * 
+             * 
+             * <p>
+             * Objects of the following type(s) are allowed in the list
+             * {@link ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation }
+             * </p>
+             * 
+             * 
+             * @return
+             *     The value of the meteringInformation property.
              */
-            public void setMeteringInformation(ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation value) {
-                this.meteringInformation = value;
+            public List<ArrivalSequence.SequenceEntries.ArrivalManagementInformation.MeteringInformation> getMeteringInformation() {
+                if (meteringInformation == null) {
+                    meteringInformation = new ArrayList<>();
+                }
+                return this.meteringInformation;
             }
 
             /**

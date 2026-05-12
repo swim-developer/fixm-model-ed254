@@ -25,7 +25,7 @@ class FixmProviderUnmarshalTest {
     @ParameterizedTest(name = "{0}")
     @DisplayName("Should unmarshal provider XML to POJO")
     @ValueSource(strings = {
-        "/ed254-provider-entity-example.xml"
+        "/ed254-provider-entity-example2.xml"
     })
     void shouldUnmarshalProviderXml(String resourcePath) throws Exception {
         String xml = loadXml(resourcePath);
